@@ -6,10 +6,14 @@ class Tarea:
 
     # Métodos CRUD
     def read(self) -> str:
-        return self.id, self.tarea, self.estado
+        return f"{self.id}|&&|{self.tarea}|&&|{self.estado}"
 
-    def update(self):
-        pass
+    def update(self, id, tarea, estado) -> None:
+        self.id = id
+        self.tarea = tarea
+        self.estado = estado
 
     def delete(self):
-        pass
+        self.id     = None
+        self.tarea  = None
+        self.estado = None
